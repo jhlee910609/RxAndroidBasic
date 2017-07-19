@@ -24,7 +24,7 @@
 
 ### 2. Lambda Expressions
 
-> 람다식은 익명 함수를 생성하기 위한 식으로 객체 지향 언어보다는 함수 지향 언어에 가깝다.
+> 람다식은 익명 함수를 생성하기 위한 식으로 객체 지향 언어보다는 **'함수 지향 언어**'에 가깝다.
 
 ##### 2.1. 람다식을 사용하는 이유
 
@@ -71,20 +71,31 @@ Runnable runnable = () -> {  /* 로직 */  };
 
 
 
-### 3. RxJava
+### 3. RxJava 2.0
 
 - 비동기, 이벤트 기반 프로그램을 작성하기 위한 라이브러리
-- 스트림을 사용한다. 
+- 비동기, 동기 스트림을 사용한다. 
 
 > RxJava는 자바와 안드로이드를 위한 리액티브 프로그래밍 구현체로서 **함수형 프로그래밍의 영향**을 받았다. 따라서 함수 구성을 선호하며 전역 상태나 부수효과를 피하고 비동기나 이벤트 기반 프로그램을 작성할 때 **스트림 방식**으로 생각한다. 
 
 ##### 2.1. RxJava 필수 개념
 
-###### 2.1.1. Observer
+![](https://ws2.sinaimg.cn/large/006tKfTcgy1fhpj5dudzpj31a40laqcb.jpg)
 
-> 옵저버는 Observable을 구독하며 '구독자'나 '관찰자' 또는 '리액터'라고 불려지고 있지만, 통상적으로 이 모델은 리액터 패턴을 의미한다.
+###### 2.1.1. Observer - sub thread에서 작동
 
-###### 2.1.2. Observable
+- 옵저버는 `Observable`을 구독하며 '구독자', '관찰자' 또는 '리액터'라고 불려지고 있지만 통상적으로 이 모델은 리액터 패턴을 의미한다.
+
+###### 2.1.2. Subscriber - Main thread(ui thread)에서 작동 
+
+- Android의 `Main Thread`로 돌아가는 `View(TextView, ImageView etc…)`에 해당된다.
+
+
+###### 2.1.3. Subject
+
+- Subject는 Observable의 발행(emit)의 대상이 된다.
+
+###### 2.1.3. Observable
 
 - Observable은 emitt(발신, 방출)하는 주체이다.
 
