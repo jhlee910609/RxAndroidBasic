@@ -80,7 +80,7 @@ Runnable runnable = () -> {  /* 로직 */  };
 
 ##### 2.1. RxJava 필수 개념
 
-![](https://ws2.sinaimg.cn/large/006tKfTcgy1fhpj5dudzpj31a40laqcb.jpg)
+![](https://ws3.sinaimg.cn/large/006tKfTcgy1fhportwjf9j31a40laqcb.jpg)
 
 ###### 2.1.1. Observer - sub thread에서 작동
 
